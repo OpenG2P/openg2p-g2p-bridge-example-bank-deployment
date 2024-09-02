@@ -249,6 +249,9 @@ envVars:
   EXAMPLE_BANK_PORT: '8000'
   EXAMPLE_BANK_NO_OF_WORKERS: '1'
   EXAMPLE_BANK_OPENAPI_ROOT_PATH: '/api/example-bank'
+  EXAMPLE_BANK_CELERY_BROKER_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
+  EXAMPLE_BANK_CELERY_BACKEND_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
+
 
 envVarsFrom:
   EXAMPLE_BANK_DB_PASSWORD:

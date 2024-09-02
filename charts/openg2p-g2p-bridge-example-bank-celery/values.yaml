@@ -184,21 +184,21 @@ volumePermissions:
     ##
 
 envVars:
-  EXAMPLE_BANK_DB_DBNAME: example_bank_db
-  EXAMPLE_BANK_DB_HOSTNAME: '{{ include "postgresql.v1.primary.fullname" .Subcharts.postgresql }}'
-  EXAMPLE_BANK_DB_PORT: 5432
-  EXAMPLE_BANK_DB_USERNAME: bankuser
-  EXAMPLE_BANK_WORKER_TYPE: gunicorn
-  EXAMPLE_BANK_HOST: 0.0.0.0
-  EXAMPLE_BANK_PORT: '8000'
-  EXAMPLE_BANK_NO_OF_WORKERS: '1'
-  EXAMPLE_BANK_PROCESS_PAYMENT_FREQUENCY: 10
-  EXAMPLE_BANK_CELERY_BROKER_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
-  EXAMPLE_BANK_CELERY_BACKEND_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
+  EXAMPLE_BANK_CELERY_DB_DBNAME: example_bank_db
+  EXAMPLE_BANK_CELERY_DB_HOSTNAME: '{{ include "postgresql.v1.primary.fullname" .Subcharts.postgresql }}'
+  EXAMPLE_BANK_CELERY_DB_PORT: 5432
+  EXAMPLE_BANK_CELERY_DB_USERNAME: bankuser
+  EXAMPLE_BANK_CELERY_WORKER_TYPE: gunicorn
+  EXAMPLE_BANK_CELERY_HOST: 0.0.0.0
+  EXAMPLE_BANK_CELERY_PORT: '8000'
+  EXAMPLE_BANK_CELERY_NO_OF_WORKERS: '1'
+  EXAMPLE_BANK_CELERY_PROCESS_PAYMENT_FREQUENCY: 10
+  EXAMPLE_BANK_CELERY_CELERY_BROKER_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
+  EXAMPLE_BANK_CELERY_CELERY_BACKEND_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
 
 
 envVarsFrom:
-  EXAMPLE_BANK_DB_PASSWORD:
+  EXAMPLE_BANK_CELERY_DB_PASSWORD:
     secretKeyRef:
       name: '{{ include "postgresql.v1.primary.fullname" .Subcharts.postgresql }}'
       key: password
@@ -282,7 +282,7 @@ postgresCheckerInit:
   command:
   - 'sh'
   - '-c'
-  - 'until pg_isready -U ${EXAMPLE_BANK_DB_USERNAME} -h ${EXAMPLE_BANK_DB_HOSTNAME} -p ${EXAMPLE_BANK_DB_PORT:-5432} -d ${EXAMPLE_BANK_DB_DBNAME:-bridgedb}; do sleep 3; done'
+  - 'until pg_isready -U ${EXAMPLE_BANK_CELERY_DB_USERNAME} -h ${EXAMPLE_BANK_CELERY_DB_HOSTNAME} -p ${EXAMPLE_BANK_CELERY_DB_PORT:-5432} -d ${EXAMPLE_BANK_CELERY_DB_DBNAME:-bridgedb}; do sleep 3; done'
 
 postgresql:
   enabled: true
