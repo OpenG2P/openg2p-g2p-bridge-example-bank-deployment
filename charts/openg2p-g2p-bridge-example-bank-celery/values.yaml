@@ -195,7 +195,7 @@ envVars:
   EXAMPLE_BANK_CELERY_PROCESS_PAYMENT_FREQUENCY: 10
   EXAMPLE_BANK_CELERY_CELERY_BROKER_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
   EXAMPLE_BANK_CELERY_CELERY_BACKEND_URL: redis://{{ include "common.names.fullname" .Subcharts.redis }}-master:6379/0
-
+  EXAMPLE_BANK_CELERY_MT940_STATEMENT_CALLBACK_URL: http://localhost:8003/api/g2p-bridge/upload_mt940
 
 envVarsFrom:
   EXAMPLE_BANK_CELERY_DB_PASSWORD:
