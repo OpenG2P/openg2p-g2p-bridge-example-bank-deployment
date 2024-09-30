@@ -1,5 +1,5 @@
 global:
-  exampleBankHostname: example-bank.dev.openg2p.org
+  exampleBankHostname: example-bank.sandbox.openg2p.net
 
 openg2p-g2p-bridge-example-bank-api:
   enabled: true
