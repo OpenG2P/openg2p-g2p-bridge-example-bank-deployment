@@ -1,4 +1,8 @@
+global:
+  exampleBankHostname: example-bank.sandbox.openg2p.net
+
 openg2p-g2p-bridge-example-bank-api:
+  hostname: example-bank.sandbox.openg2p.net
   enabled: true
   common:
     enabled: false

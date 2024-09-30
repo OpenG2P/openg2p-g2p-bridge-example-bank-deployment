@@ -1,5 +1,5 @@
 global:
-  g2pBridgeHostname: ''
+  exampleBankHostname: example-bank.sandbox.openg2p.net
 
 hostname: ''
 nameOverride: openg2p-g2p-bridge-example-bank-celery
