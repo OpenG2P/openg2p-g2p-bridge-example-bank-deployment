@@ -1,7 +1,6 @@
 global:
-  g2pBridgeHostname: example-bank.dev.openg2p.org
+  exampleBankHostname: example-bank.sandbox.openg2p.net
 
-hostname: example-bank.dev.openg2p.org
 nameOverride:  openg2p-g2p-bridge-example-bank-api
 fullnameOverride:  openg2p-g2p-bridge-example-bank-api
 

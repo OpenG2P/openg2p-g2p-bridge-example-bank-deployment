@@ -1,11 +1,10 @@
-name: Publish OpenG2P Helm charts on
+name: Publish OpenG2P Example Bank Helm charts
 
 on:
   push:
-    tags-ignore:
+    tags:
       - '**'
-    branches:
-      - 1.*
+    branches-ignore:
       - develop
       - main
   workflow_dispatch:
