@@ -2,7 +2,7 @@ apiVersion: v2
 name: openg2p-g2p-bridge-example-bank-celery
 description: A Helm chart for OpenG2P G2P Bridge Example Bank Celery
 type: application
-version: 1.0.0
+version: 1.0.2
 appVersion: ""
 dependencies:
 - name: common
