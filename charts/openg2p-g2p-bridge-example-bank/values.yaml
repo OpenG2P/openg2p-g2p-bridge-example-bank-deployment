@@ -1,8 +1,11 @@
 global:
-  exampleBankHostname: example-bank.sandbox.openg2p.net
+  exampleBankHostname: example-bank.explore.openg2p.org
 
 openg2p-g2p-bridge-example-bank-api:
   enabled: true
+  image:
+    registry: docker.io
+    tag: '1.0.2'
   common:
     enabled: false
   postgresql:
@@ -22,6 +25,9 @@ openg2p-g2p-bridge-example-bank-api:
 
 openg2p-g2p-bridge-example-bank-celery:
   enabled: true
+  image:
+    registry: docker.io
+    tag: '1.0.2'
   common:
     enabled: false
   postgresql:
@@ -53,8 +59,10 @@ postgresql:
       max_replication_slots = 10
 
 redis:
-  cluster:
-    enabled: false
-  replicaCount: 1
+  enabled: true
+  architecture: standalone
+  master:
+    persistence:
+      enabled: false
   auth:
     enabled: false
