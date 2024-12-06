@@ -2,8 +2,6 @@ name: Publish OpenG2P Example Bank Helm charts
 
 on:
   push:
-    tags:
-      - '**'
     branches-ignore:
       - develop
       - main
