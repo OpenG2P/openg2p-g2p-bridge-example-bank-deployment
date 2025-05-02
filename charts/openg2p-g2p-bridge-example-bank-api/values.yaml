@@ -103,7 +103,7 @@ serviceAccount:
 image:
   registry: docker.io
   repository: openg2p/openg2p-g2p-bridge-example-bank-api
-  tag: develop
+  tag: 1.1
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
   ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
