@@ -1,3 +1,3 @@
-# OpenG2P G2P Bridge Celery Beat Producers Helm Chart
+# OpenG2P G2P Bridge API Helm Chart
 
-Helm Chart of OpenG2P G2P Bridge Celery Beat Producers
+Helm Chart of OpenG2P G2P Bridge API

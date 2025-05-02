@@ -5,7 +5,7 @@ openg2p-g2p-bridge-example-bank-api:
   enabled: true
   image:
     registry: docker.io
-    tag: '1.0.2'
+    tag: '1.1.0'
   common:
     enabled: false
   postgresql:
@@ -27,7 +27,7 @@ openg2p-g2p-bridge-example-bank-celery:
   enabled: true
   image:
     registry: docker.io
-    tag: '1.0.2'
+    tag: '1.1.0'
   common:
     enabled: false
   postgresql:
