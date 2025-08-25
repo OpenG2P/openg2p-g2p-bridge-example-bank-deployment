@@ -9,8 +9,4 @@ questions:
   type: boolean
   label: G2P Bridge API
 
-- variable: openg2p-g2p-bridge-example-bank-celery.enabled
-  description: Install G2P Bridge Example Bank Celery
-  type: boolean
-  label: G2P Bridge Celery
 
