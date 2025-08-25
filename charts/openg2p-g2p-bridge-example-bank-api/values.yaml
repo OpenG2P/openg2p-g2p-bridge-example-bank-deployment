@@ -98,7 +98,7 @@ serviceAccount:
   ## The name of the ServiceAccount to use.
   ## If not set and create is true, a name is generated using the fullname template
   ##
-  name:  openg2p-g2p-bridge-example-bank-api
+  name:  ''
 
 image:
   registry: docker.io

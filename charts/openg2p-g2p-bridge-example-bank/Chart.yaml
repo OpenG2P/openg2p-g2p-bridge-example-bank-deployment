@@ -20,9 +20,12 @@ dependencies:
 - name: openg2p-g2p-bridge-example-bank-api
   version: 1.1
   condition: openg2p-g2p-bridge-example-bank-api.enabled
-- name: openg2p-g2p-bridge-example-bank-celery
+- name: openg2p-g2p-bridge-example-bank-celery-beat-producers
   version: 1.1
-  condition: openg2p-g2p-bridge-example-bank-celery.enabled
+  condition: openg2p-g2p-bridge-example-bank-celery-beat-producers.enabled
+- name: openg2p-g2p-bridge-example-bank-celery-workers
+  version: 1.1
+  condition: openg2p-g2p-bridge-example-bank-celery-workers.enabled
 keywords:
   - openg2p-example-bank
 maintainers:
@@ -30,4 +33,4 @@ maintainers:
     name: OpenG2P
 icon: https://openg2p.github.io/openg2p-helm/openg2p-logo.png
 annotations:
-  catalog.cattle.io/display-name: "OpenG2P-G2P-Bridge-Example-Bank"
+  catalog.cattle.io/display-name: "OpenG2P G2P Bridge Example Bank"

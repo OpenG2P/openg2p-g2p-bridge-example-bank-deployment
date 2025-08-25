@@ -1,11 +1,12 @@
 name: Publish OpenG2P Example Bank Helm charts
 
 on:
-  push:
-    branches-ignore:
-      - develop
-      - main
   workflow_dispatch:
+    inputs:
+      forcePublishCharts:
+        description: "Force publish Charts?"
+        default: "*"
+        type: string
 
 
 jobs:
@@ -106,6 +107,6 @@ jobs:
         author_name: openg2pbot
         author_email: bot@openg2p.org
         default_author: user_info
-        message: 'added spar helm charts for publish openg2p/openg2p-spar-deployment@${{ github.sha }}'
+        message: 'added example bank helm charts for publish openg2p/openg2p-g2p-bridge-example-bank-deployment@${{ github.sha }}'
         add: './*.tgz ./index.yaml rancher/index.yaml'
       if: env.SKIP != 'TRUE'
